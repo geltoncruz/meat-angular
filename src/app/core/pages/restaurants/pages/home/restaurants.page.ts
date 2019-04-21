@@ -5,8 +5,9 @@
  */
 
 import { Component, OnInit } from "@angular/core";
-import { Restaurant } from "./model/restaurant.model";
-import { RestaurantService } from "./services/Restaurant.service";
+import { Restaurant } from "../../model/restaurant.model";
+import { RestaurantService } from "../../services/Restaurant.service";
+
 @Component({
     selector: 'app-restaurants',
     templateUrl: 'restaurants.page.html'
