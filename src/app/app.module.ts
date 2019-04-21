@@ -5,18 +5,22 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component'
-import { HeaderComponent } from './component/header/header.component';
-import { Home } from './component/home/home.component';
-import { About } from './component/about/about.component';
-import { ROUTES } from './router';
+import { HeaderComponent } from './core/header/header.component';
+import { Home } from './core/pages/home/home.page';
+import { About } from './core/pages/about/about.page';
+import { Restaurants } from './core/pages/restaurants/restaurants.page';
 
+import { ROUTES } from './router';
+import { restaurant } from './core/pages/restaurants/components/restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     Home,
-    About
+    About,
+    Restaurants,
+    restaurant
   ],
   imports: [
     BrowserModule,
