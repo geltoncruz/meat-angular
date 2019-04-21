@@ -9,11 +9,13 @@ import { HeaderComponent } from './core/header/header.component';
 import { Home } from './core/pages/home/home.page';
 import { About } from './core/pages/about/about.page';
 import { Restaurants } from './core/pages/restaurants/pages/home/restaurants.page';
-import { restaurant } from './core/pages/restaurants/components/restaurant.component';
+import { restaurantItem } from './core/pages/restaurants/components/restaurant-item/restaurant-item.component';
+import { RestaurantsDetail } from './core/pages/restaurants/pages/restaurants-detail/restaurants-detail.page';
 import { RestaurantService } from './core/pages/restaurants/services/Restaurant.service';
 
 import { ROUTES } from './router';
-import { RestaurantsDetail } from './core/pages/restaurants/pages/restaurantsDetail/restaurants-detail.page';
+import { RestaurantMenu } from './core/pages/restaurants/components/restaurant-menu/restaurant-menu.component';
+import { restaurantCart } from './core/pages/restaurants/components/restaurant-cart/restaurant-cart.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,10 @@ import { RestaurantsDetail } from './core/pages/restaurants/pages/restaurantsDet
     Home,
     About,
     Restaurants,
-    restaurant,
-    RestaurantsDetail
+    restaurantItem,
+    RestaurantsDetail,
+    RestaurantMenu,
+    restaurantCart
   ],
   imports: [
     BrowserModule,
