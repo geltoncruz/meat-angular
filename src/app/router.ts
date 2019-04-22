@@ -3,6 +3,8 @@ import { Home } from "./core/pages/home/home.page";
 import { About } from "./core/pages/about/about.page";
 import { Restaurants } from "./core/pages/restaurants/pages/home/restaurants.page";
 import { RestaurantsDetail } from "./core/pages/restaurants/pages/restaurants-detail/restaurants-detail.page";
+import { RestaurantMenu } from "./core/pages/restaurants/components/restaurant-menu/restaurant-menu.component";
+import { RestaurantsReviews } from "./core/pages/restaurants/pages/restaurants-reviews/restaurants-reviews.page";
 
 export const ROUTES: Routes = [
     {
@@ -19,6 +21,13 @@ export const ROUTES: Routes = [
     },
     {
         path: 'restaurants/:id',
-        component: RestaurantsDetail
+        component: RestaurantsDetail,
+        children: [
+            { path: '', redirectTo: 'menu', pathMatch: 'full'},
+            { path: 'menu' , component: RestaurantMenu},
+            { path: 'reviews', component: RestaurantsReviews}
+        ]
+
+        
     }
 ]

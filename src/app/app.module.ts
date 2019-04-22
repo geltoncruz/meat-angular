@@ -16,6 +16,7 @@ import { RestaurantService } from './core/pages/restaurants/services/Restaurant.
 import { ROUTES } from './router';
 import { RestaurantMenu } from './core/pages/restaurants/components/restaurant-menu/restaurant-menu.component';
 import { restaurantCart } from './core/pages/restaurants/components/restaurant-cart/restaurant-cart.component';
+import { RestaurantsReviews } from './core/pages/restaurants/pages/restaurants-reviews/restaurants-reviews.page';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { restaurantCart } from './core/pages/restaurants/components/restaurant-c
     restaurantItem,
     RestaurantsDetail,
     RestaurantMenu,
-    restaurantCart
+    restaurantCart,
+    RestaurantsReviews
   ],
   imports: [
     BrowserModule,
