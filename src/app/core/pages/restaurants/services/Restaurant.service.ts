@@ -24,4 +24,12 @@ export class RestaurantService {
         .catch(ErrorHandler.HandlerError);
     }
 
+    findOne(id: string): Observable<Restaurant> {
+        return this.http.get(`${API_URL}/restaurants/${id}`)
+        .map(response => response.json())
+        .catch(ErrorHandler.HandlerError);
+    }
+
+    
+
 }
