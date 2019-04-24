@@ -3,7 +3,6 @@
  */
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MenuItem } from '../../model/menu-item.model';
-import { RestaurantService } from '../../services/Restaurant.service';
 
 @Component({
     selector: 'app-restaurant-menu-item',
@@ -21,7 +20,5 @@ export class RestaurantMenuItem implements OnInit {
 
     addItemEmiiter(){
         this.add.emit(this.menuItem);
-        console.log(this.menuItem);
-        
     }
 }

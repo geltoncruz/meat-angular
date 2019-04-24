@@ -1,7 +1,11 @@
  <!--INÍCIO DO MENU -->
  <div class="col-md-9 col-xs-12">
-    <app-restaurant-menu-item *ngFor="let item of menuItem | async" [menuItem]="item"></app-restaurant-menu-item>
+    <app-restaurant-menu-item
+     *ngFor="let item of menuItem | async"
+      [menuItem]="item"
+      (add)="shoppingcart.addItem(item)"
+      ></app-restaurant-menu-item>
 </div>
 <div class="col-md-3 col-xs-12">
-  <app-restaurant-cart></app-restaurant-cart>
+  <app-restaurant-cart #shoppingcart></app-restaurant-cart>
 </div>
