@@ -5,6 +5,7 @@ import { Restaurants } from "./core/pages/restaurants/pages/home/restaurants.pag
 import { RestaurantsDetail } from "./core/pages/restaurants/pages/restaurants-detail/restaurants-detail.page";
 import { RestaurantMenu } from "./core/pages/restaurants/components/restaurant-menu/restaurant-menu.component";
 import { RestaurantsReviews } from "./core/pages/restaurants/pages/restaurants-reviews/restaurants-reviews.page";
+import { OrderPage } from "./core/pages/restaurants/pages/order/order.page";
 
 export const ROUTES: Routes = [
     {
@@ -27,7 +28,9 @@ export const ROUTES: Routes = [
             { path: 'menu' , component: RestaurantMenu},
             { path: 'reviews', component: RestaurantsReviews}
         ]
-
-        
+    },
+    {
+        path: 'order',
+        component: OrderPage
     }
 ]
