@@ -20,6 +20,7 @@ import { RestaurantsReviews } from './core/pages/restaurants/pages/restaurants-r
 import { RestaurantMenuItem } from './core/pages/restaurants/components/restaurant-menu-item/restaurant-menu-item.component';
 import { ShoppingSartService } from './core/pages/restaurants/services/shopping-cart.service';
 import { OrderPage } from './core/pages/restaurants/pages/order/order.page';
+import { InputContainer } from './shared/components/input-container/input-container.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { OrderPage } from './core/pages/restaurants/pages/order/order.page';
     RestaurantMenuItem,
     restaurantCart,
     RestaurantsReviews,
-    OrderPage
+    OrderPage,
+    InputContainer
   ],
   imports: [
     BrowserModule,
