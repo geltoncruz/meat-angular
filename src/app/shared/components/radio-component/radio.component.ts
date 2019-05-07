@@ -32,7 +32,7 @@ export class Radio implements OnInit, ControlValueAccessor{
     setDisabledState?(isDisabled: boolean): void {
     }
     
-    @Input() paymentOpt: Array<RadioModel> = [];
+    @Input() paymentOpt: RadioModel;
     value: any;
 
     ngOnInit(): void {
