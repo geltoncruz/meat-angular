@@ -27,4 +27,12 @@ export class InputContainer implements OnInit, AfterContentInit {
             throw new Error('Esse conteúdo precisa ser usado com a diretiva NgModel');
         }
     }
+
+    hasSuccess(): boolean{
+        return this.input.valid && (this.input.dirty || this.input.touched)
+    }
+    hasError(): boolean{
+        return this.input.invalid && (this.input.dirty || this.input.touched)
+        
+    }
 }

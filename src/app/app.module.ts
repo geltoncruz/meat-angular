@@ -21,6 +21,7 @@ import { RestaurantMenuItem } from './core/pages/restaurants/components/restaura
 import { ShoppingSartService } from './core/pages/restaurants/services/shopping-cart.service';
 import { OrderPage } from './core/pages/restaurants/pages/order/order.page';
 import { InputContainer } from './shared/components/input-container/input-container.component';
+import { Radio } from './shared/components/radio-component/radio.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { InputContainer } from './shared/components/input-container/input-contai
     restaurantCart,
     RestaurantsReviews,
     OrderPage,
-    InputContainer
+    InputContainer,
+    Radio
   ],
   imports: [
     BrowserModule,

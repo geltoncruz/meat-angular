@@ -21,17 +21,19 @@
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <app-input-container label="Endereço" errorMessage="Campo obrigatório e Mínimo de 5 caracteres">
-                        <input class="form-control" type="text" name="address" ngModel required minlength="5" autocomplete="no" placeholder="Endereço" />
+                        <input class="form-control" type="text" name="address" ngModel required minlength="5"
+                            autocomplete="no" placeholder="Endereço" />
                     </app-input-container>
                 </div>
-                <div class="col-sm-2 col-xs-6">
-                    <app-input-container label="Número" errorMessage="Campo Obrigatório">
-                            <input type="text" class="form-control" name="number" ngModel required  placeholder="Número" autocomplete="no"/>
+                <div class="col-sm-3 col-xs-6">
+                    <app-input-container label="Número" errorMessage="Obrigatório e somente números">
+                        <input type="text" class="form-control" name="number" ngModel required placeholder="Número"
+                            autocomplete="no" pattern="^[0-9]*$"/>
                     </app-input-container>
                 </div>
-                <div class="col-sm-4 col-xs-6">
+                <div class="col-sm-3 col-xs-6">
                     <app-input-container>
-                            <input type="text" class="form-control" name="complement" ngModel placeholder="Complemento">
+                        <input type="text" class="form-control" name="complement" ngModel placeholder="Complemento">
                     </app-input-container>
                 </div>
                 <!-- /.col -->
@@ -98,31 +100,7 @@
                     <p class="lead">Formas de Pagamento:</p>
 
                     <div class="form-group">
-                        <div>
-                            <label>
-                                <div class="iradio_flat-red checked" aria-checked="false" aria-disabled="false"
-                                    style="position: relative;">
-                                    <input type="radio" name="r3" class="flat-red" checked=""
-                                        style="position: absolute; opacity: 0;" />
-                                    <ins class="iCheck-helper"
-                                        style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
-                                </div>
-                                Dinheiro
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                <div class="iradio_flat-red" aria-checked="false" aria-disabled="false"
-                                    style="position: relative;">
-                                    <input type="radio" name="r3" class="flat-red" checked=""
-                                        style="position: absolute; opacity: 0;" />
-                                    <ins class="iCheck-helper"
-                                        style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
-                                </div>
-                                Cartão de Débito
-                            </label>
-                        </div>
-
+                        <app-radio *ngFor="let payment of paymentOptions" [paymentOpt]="payment" name="paymentOption" ngModel></app-radio>
                     </div>
 
                 </div>
@@ -156,7 +134,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                [<button    [disabled]="!form.valid" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i>
+                [<button [disabled]="!form.valid" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i>
                     Concluir Pedido
                 </button>
             </div>
